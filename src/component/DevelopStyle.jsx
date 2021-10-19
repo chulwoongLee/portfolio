@@ -1,8 +1,10 @@
 import React, { Fragment } from "react";
 import { Stepper, Step, StepLabel, Typography } from "@mui/material";
+import StickHeader from "./StickHeader";
 export default function DevelopStyle() {
     return (
         <Fragment>
+            <StickHeader title="개발진행"/>
             <div style={{ backgroundColor: "#F6F6F6"}}>
                 <div style={{ margin: 10 }}>
                     <Stepper activeStep={5} orientation="vertical">
