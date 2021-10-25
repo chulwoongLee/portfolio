@@ -1,10 +1,12 @@
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment, useEffect,useState } from "react";
 import bb, { line } from "billboard.js"
 import "billboard.js/dist/billboard.css";
-import { Card, Typography } from "@mui/material";
-
+import { Card, Typography, TextField,Button } from "@mui/material";
+import {formatDate} from "src/js/commonjs";
 
 export default function ChartExample() {
+    const [fromDate,setFromDate] = useState("2021-10-15");
+    const [toDate,setToDate] = useState("2021-10-18");
     useEffect(() => {
         var chart = bb.generate({
             bindto: "#chart",
@@ -13,8 +15,10 @@ export default function ChartExample() {
                 // type: line(),
                 type: line(),
                 columns: [
-                    ["data1", 30, 200, 100, 400, 150, 250],
-                    ["data2", 40, 250, 100, 0,250,150]
+                    ["2021-10-15", 140, 200, 83, 65],
+                    ["2021-10-16", 55, 150, 45, 15],
+                    ["2021-10-17", 30, 123, 123, 64],
+                    ["2021-10-18", 74, 44, 167, 2]
                 ]
             },
             zoom: {
@@ -23,12 +27,17 @@ export default function ChartExample() {
                 enabled: true
             }
         });
-        //chart.load();
     }, []);
     return (
         <Fragment>
             <div style={{ margin: 10 }}>
-                <Card style={{  }}>
+                <Card style={{}}>
+                    <div style={{ display: "flex" }}>
+                        <TextField disabled value={fromDate} onChange={(e) => { setFromDate(e.target.value);}} type="date"></TextField>
+                        <div style={{ flexGrow:1,alignSelf:"center" }}><Typography align="center" variant="h6">~</Typography></div>
+                        <TextField disabled value={toDate} onChange={(e) => { setToDate(e.target.value);}} type="date"></TextField>
+                        <Button variant="contained"><Typography variant="body1">검색</Typography></Button>
+                    </div>
                     <div id="chart"></div>
                 </Card>
             </div>
