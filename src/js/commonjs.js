@@ -1,16 +1,6 @@
 import axios from "axios";
 export function fncSendSlack(title) {
-    axios({
-        "method": "post",
-        "url": "https://hooks.slack.com/services/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",
-        "data": {
-            "attachments": [
-              {
-                  "author_name": title
-              }
-          ]
-        }
-    });
+  
 }
 export function lpad(text, length, addText) {
     let retVal = "" + text;
