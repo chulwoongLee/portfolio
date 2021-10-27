@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/portfolio/static/js/main.dbe410ea.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.dbe410ea.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.510150a0.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.510150a0.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.392b0c7b.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.392b0c7b.js.map",
     "static/css/2.11e0b370.chunk.css": "/portfolio/static/css/2.11e0b370.chunk.css",
@@ -15,6 +15,7 @@
     "static/css/main.6dea0f05.chunk.css.map": "/portfolio/static/css/main.6dea0f05.chunk.css.map",
     "static/js/2.4c6d9887.chunk.js.LICENSE.txt": "/portfolio/static/js/2.4c6d9887.chunk.js.LICENSE.txt",
     "static/media/codeExampleImg.04bc3c45.png": "/portfolio/static/media/codeExampleImg.04bc3c45.png",
+    "static/media/connectSlack.2e5672ca.png": "/portfolio/static/media/connectSlack.2e5672ca.png",
     "static/media/mainPageImg.99b00510.png": "/portfolio/static/media/mainPageImg.99b00510.png",
     "static/media/notiPushImg.5d71faa9.png": "/portfolio/static/media/notiPushImg.5d71faa9.png",
     "static/media/statementExampleImg.51478be1.png": "/portfolio/static/media/statementExampleImg.51478be1.png",
@@ -26,6 +27,6 @@
     "static/css/2.11e0b370.chunk.css",
     "static/js/2.4c6d9887.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.dbe410ea.chunk.js"
+    "static/js/main.510150a0.chunk.js"
   ]
 }
