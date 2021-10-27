@@ -6,9 +6,12 @@ import statementExampleImg from "src/img/statementExampleImg.png";
 import notiPushImg from "src/img/notiPushImg.png";
 import woongPangImg from "src/img/woongPangImg.png";
 import whatshereImg from "src/img/whatshereImg.png";
+import connectSlack from "src/img/connectSlack.png";
 import StickHeader from "./StickHeader";
 import CountryMap from "./CountryMap";
 import ChartExample from "./ChartExample";
+
+
 export default function PortFolio() {
     return (
         <Fragment>
@@ -48,6 +51,10 @@ export default function PortFolio() {
                     <br />
                     <Typography style={{ fontWeight: "bold" }} variant="h6">오픈소스를 이용한 차트 활용</Typography>
                     <ChartExample />
+                    <br />
+                    <br />
+                    <Typography style={{ fontWeight: "bold" }} variant="h6">slack-hook연동하여 업무 담당자에게 메시지 전달</Typography>
+                    <img width="100%" src={connectSlack} />
                     <br />
                 </div>
             </div>
