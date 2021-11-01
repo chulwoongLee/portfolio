@@ -105,12 +105,13 @@ export default function DevelopHistory() {
                 <br />
             </div>
             <Dialog
+                style={{ zIndex: 9999 }}
                 maxWidth="lg"
                 open={pickData !== null}>
                 {pickData !== null &&
                     <div>
-                        <DialogTitle style={{display:"flex"}}><div style={{flexGrow:1}}>{pickData.subject}</div><Button variant="contained" color="secondary" onClick={() => { setPIckData(null); }}>닫기</Button></DialogTitle>
-                        <TableContainer style={{maxHeight:500}}>
+                        <DialogTitle style={{ display: "flex" }}><div style={{ flexGrow: 1 }}>{pickData.subject}</div><Button variant="contained" color="secondary" onClick={() => { setPIckData(null); }}>닫기</Button></DialogTitle>
+                        <TableContainer style={{ maxHeight: 500 }}>
                             <Table>
                                 <TableBody>
                                     {pickData.subContents.map((dataList, index) => (
