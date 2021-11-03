@@ -1,5 +1,5 @@
-import React, { Fragment } from "react";
-import { Typography, Button, Card } from "@mui/material";
+import React, { Fragment, useState, useRef } from "react";
+import { Typography, Card, Tabs, Tab } from "@mui/material";
 import mainPageImg from "src/img/mainPageImg.png";
 import codeExampleImg from "src/img/codeExampleImg.png";
 import statementExampleImg from "src/img/statementExampleImg.png";
@@ -10,6 +10,8 @@ import connectSlack from "src/img/connectSlack.png";
 import StickHeader from "./StickHeader";
 import CountryMap from "./CountryMap";
 import ChartExample from "./ChartExample";
+
+import SettingSwiper from "./common/SettingSwiper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Pagination } from 'swiper';
@@ -42,6 +44,8 @@ let settingData = [
     },
 ]
 export default function PortFolio() {
+    const swiperRef = useRef(null);
+    const [pickTab, setPickTab] = useState(0);
     return (
         <Fragment>
             <StickHeader title="개발샘플" />
@@ -51,44 +55,34 @@ export default function PortFolio() {
                     <br />
                     {settingData.map((dataList, index) => (
                         <Card style={{ marginBottom: 10 }} key={index}>
-                            <Typography style={{ fontWeight: "bold" }} variant="h6">{dataList.title}</Typography>
-                            <br />
-                            <Swiper
-                                slidesPerView={1}
-                                pagination={true}
-                            >
-                                {dataList.list.map((dataListD, indexD) => (
-                                    <SwiperSlide style={{ textAlign: "center" }} key={indexD}>
-                                        <Typography style={{ fontWeight: "bold" }} variant="body1">{dataListD.subTitle}</Typography>
-                                        <img width="100%" src={dataListD.img} />
-                                    </SwiperSlide>
-                                ))}
-                            </Swiper>
-                            {dataList.url !== null &&
-                                <Button variant="contained" onClick={() => { window.open(dataList.url); }}><Typography style={{ fontWeight: "bold" }} variant="h6">예제페이지</Typography></Button>
-                            }
+                            <SettingSwiper settingData={dataList} />
                         </Card>
                     ))}
 
 
 
                     <Card style={{ marginBottom: 10 }}>
+                        <br />
                         <Typography style={{ fontWeight: "bold" }} variant="h6">기타</Typography>
+                        <Tabs value={pickTab} onChange={(e, v) => { setPickTab(v); swiperRef.current.swiper.slideTo(v); }} >
+                            <Tab label="svg를 이용한 지도(이벤트)표현" style={{ flex: 1 }} />
+                            <Tab label="오픈소스를 이용한 차트 활용" style={{ flex: 1 }} />
+                            <Tab label="slack-hook연동하여 업무 담당자에게 메시지 전달" style={{ flex: 1 }} />
+                        </Tabs>
                         <br />
                         <Swiper
+                            ref={swiperRef}
                             slidesPerView={1}
                             pagination={true}
+                            onSlideChange={(e) => { setPickTab(e.activeIndex); }}
                         >
                             <SwiperSlide style={{ textAlign: "center" }}>
-                                <Typography style={{ fontWeight: "bold" }} variant="body1">svg를 이용한 지도(이벤트)표현</Typography>
                                 <CountryMap />
                             </SwiperSlide>
                             <SwiperSlide style={{ textAlign: "center" }}>
-                                <Typography style={{ fontWeight: "bold" }} variant="body1">오픈소스를 이용한 차트 활용</Typography>
                                 <ChartExample />
                             </SwiperSlide>
                             <SwiperSlide style={{ textAlign: "center" }}>
-                                <Typography style={{ fontWeight: "bold" }} variant="body1">slack-hook연동하여 업무 담당자에게 메시지 전달</Typography>
                                 <img width="100%" src={connectSlack} />
                             </SwiperSlide>
                         </Swiper>

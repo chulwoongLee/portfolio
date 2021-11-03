@@ -15,7 +15,7 @@ export default function Main() {
                 <DevelopHistory/>
                 {/*<DevelopStyle /> */}
                 <PortFolio />
-                <footer style={{ bottom: 0, position: "sticky", backgroundColor: "#DDDDDD" }}>
+                <footer style={{ bottom: 0, position: "sticky", backgroundColor: "#DDDDDD",zIndex:9998 }}>
                     <Typography variant="body1" color="textSecondary" align="center" style={{ fontWeight: "bold" }}>Copyright © 이철웅 ytooktoo2@nate.com</Typography>
                 </footer>
             </Container>
