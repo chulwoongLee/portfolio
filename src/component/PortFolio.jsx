@@ -7,6 +7,7 @@ import notiPushImg from "src/img/notiPushImg.png";
 import woongPangImg from "src/img/woongPangImg.png";
 import whatshereImg from "src/img/whatshereImg.png";
 import connectSlack from "src/img/connectSlack.png";
+import chartExampleImg from "src/img/chartExampleImg.png";
 import StickHeader from "./StickHeader";
 import CountryMap from "./CountryMap";
 import ChartExample from "./ChartExample";
@@ -66,7 +67,7 @@ export default function PortFolio() {
                         <Typography style={{ fontWeight: "bold" }} variant="h6">기타</Typography>
                         <Tabs value={pickTab} onChange={(e, v) => { setPickTab(v); swiperRef.current.swiper.slideTo(v); }} >
                             <Tab label="svg를 이용한 지도(이벤트)표현" style={{ flex: 1 }} />
-                            <Tab label="오픈소스를 이용한 차트 활용" style={{ flex: 1 }} />
+                            <Tab label="트렌드 데이터를 이용한 차트 표현" style={{ flex: 1 }} />
                             <Tab label="slack-hook연동하여 업무 담당자에게 메시지 전달" style={{ flex: 1 }} />
                         </Tabs>
                         <br />
@@ -80,7 +81,7 @@ export default function PortFolio() {
                                 <CountryMap />
                             </SwiperSlide>
                             <SwiperSlide style={{ textAlign: "center" }}>
-                                <ChartExample />
+                                <img width="100%" src={chartExampleImg} />
                             </SwiperSlide>
                             <SwiperSlide style={{ textAlign: "center" }}>
                                 <img width="100%" src={connectSlack} />
