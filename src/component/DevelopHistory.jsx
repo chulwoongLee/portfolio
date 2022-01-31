@@ -3,6 +3,22 @@ import { Stepper, Step, StepLabel, Typography, Card, Button, Dialog, DialogTitle
 import StickHeader from "./StickHeader";
 let settingData = [
     {
+        "subject": "2021.11~현재 블루앤트", "contents": "테크랩-올라케어 프론트엔드 담당자",
+        "subContents": [
+            {
+                "subTitle": "이벤트 유입용 랜딩페이지 개발", "list": [
+                    "공통 디자인 개발로 모듈형 이벤트 페이지 개발",
+                    "매월 정기 이벤트 개발 진행"
+                ]
+            },
+            {
+                "subTitle": "올라케어 백오피스 리뉴얼", "list": [
+                    "병원,약국,운영 각 페이지 공통,컴포넌트 개발",
+                ]
+            },
+        ]
+    },
+    {
         "subject": "2020.04~2021.06 프리랜서", "contents": "예다함상조 통합유지보수 MOBILE(WEB) 및 TABLET(APP)담당",
         "subContents": [
             {
