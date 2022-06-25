@@ -8,6 +8,7 @@ function App() {
     <div className="App">
       <Main />
       <Snackbar
+        style={{ zIndex: 99999 }}
         open={finishPage}
         autoHideDuration={5000}
         onClose={() => {
