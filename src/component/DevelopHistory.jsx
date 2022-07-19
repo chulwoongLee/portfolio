@@ -23,6 +23,16 @@ let settingData = [
     contents: "테크랩-올라케어 프론트엔드 담당자",
     subContents: [
       {
+        subTitle: "프론트엔드 표준 설계",
+        list: [
+          "typescript 적용",
+          "TDD 일부 적용(함수 레벨)",
+          "storybook 생성하여 각 공통컴포넌트 개발 및 정리",
+          "디렉토리 정의",
+          "전역저장소 swr로 대체하여 공통 구현 및 fetcher 구현",
+        ],
+      },
+      {
         subTitle: "올라케어 백오피스 리뉴얼",
         list: [
           "아키텍쳐 및 공통 컴포넌트 설계",
