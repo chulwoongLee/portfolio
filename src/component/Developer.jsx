@@ -1,9 +1,8 @@
-import React, { Fragment, useEffect, useState } from "react";
-import { Card, Typography, Grid } from "@mui/material";
+import { Card, Typography, Grid, Container } from "@mui/material";
 import StickHeader from "./StickHeader";
 export default function Developer() {
   return (
-    <Fragment>
+    <Container maxWidth="sm">
       <StickHeader title="개발자 스킬" />
       <div
         style={{
@@ -74,6 +73,6 @@ export default function Developer() {
           </Grid>
         </div>
       </div>
-    </Fragment>
+    </Container>
   );
 }

@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { useState } from "react";
 import {
   Stepper,
   Step,
@@ -8,13 +8,12 @@ import {
   Button,
   Dialog,
   DialogTitle,
-  DialogContent,
   TableContainer,
   Table,
-  TableHead,
   TableBody,
   TableRow,
   TableCell,
+  Container,
 } from "@mui/material";
 import StickHeader from "./StickHeader";
 let settingData = [
@@ -148,7 +147,7 @@ let settingData = [
 export default function DevelopHistory() {
   const [pickData, setPIckData] = useState(null);
   return (
-    <Fragment>
+    <Container maxWidth="sm">
       <StickHeader title="개발경력" />
       <div style={{ backgroundColor: "#E3F0FF" }}>
         <br />
@@ -224,6 +223,6 @@ export default function DevelopHistory() {
           </div>
         )}
       </Dialog>
-    </Fragment>
+    </Container>
   );
 }

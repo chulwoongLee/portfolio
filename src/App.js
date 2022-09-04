@@ -1,18 +1,20 @@
 import Main from "./component/Main";
 import { Snackbar, Typography } from "@mui/material";
 import { CheckCircleOutline } from "@mui/icons-material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 function App() {
   const [finishPage, setFinishPage] = useState(true);
+
   return (
     <div className="App">
       <Main />
+
       <Snackbar
         style={{ zIndex: 99999 }}
         open={finishPage}
+        anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
         autoHideDuration={5000}
         onClose={() => {
-          console.log("종료");
           setFinishPage(false);
         }}
       >
