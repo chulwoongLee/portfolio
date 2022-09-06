@@ -25,13 +25,10 @@ export default function Developer() {
                   <Typography style={{ fontWeight: "bold" }} variant="h6">
                     WEB
                   </Typography>
-                  <li>
-                    REACT
-                    <ul>
-                      <li>nextjs</li>
-                    </ul>
-                  </li>
+                  <li>REACT(nextjs)</li>
                   <li>JAVASCRIPT</li>
+                  <li>HTML</li>
+                  <li>CSS</li>
                   <li>JSP</li>
                 </ul>
               </Card>
@@ -50,13 +47,7 @@ export default function Developer() {
                   <Typography style={{ fontWeight: "bold" }} variant="h6">
                     APP
                   </Typography>
-                  <li>
-                    REACT-NATIVE(EXPO)
-                    <ul>
-                      <li>noti-push</li>
-                      <li>google-map</li>
-                    </ul>
-                  </li>
+                  <li>REACT-NATIVE(EXPO기반)</li>
                 </ul>
               </Card>
               <Card style={{ marginBottom: 10 }}>
