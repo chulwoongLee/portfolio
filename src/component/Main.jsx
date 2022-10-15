@@ -17,7 +17,6 @@ export default function Main() {
     <Fragment>
       <Developer />
       <DevelopHistory />
-      {/*<DevelopStyle /> */}
       <PortFolio />
       {windowMode && (
         <section
@@ -28,11 +27,11 @@ export default function Main() {
             flexDirection: "column",
           }}
         >
-          <Container maxWidth="sm">
+          <div style={{ width: 768 }}>
             <StickHeader title="스토리북" />
-          </Container>
+          </div>
           <embed
-            style={{ width: 980, height: 1000 }}
+            style={{ width: 768, height: 1000 }}
             src={process.env.PUBLIC_URL + "/storybook-static/index.html"}
           />
         </section>

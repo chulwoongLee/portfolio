@@ -2,7 +2,7 @@ import { Card, Typography, Grid, Container } from "@mui/material";
 import StickHeader from "./StickHeader";
 export default function Developer() {
   return (
-    <Container maxWidth="sm">
+    <section>
       <StickHeader title="개발자 스킬" />
       <div
         style={{
@@ -64,6 +64,6 @@ export default function Developer() {
           </Grid>
         </div>
       </div>
-    </Container>
+    </section>
   );
 }

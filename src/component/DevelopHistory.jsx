@@ -13,7 +13,6 @@ import {
   TableBody,
   TableRow,
   TableCell,
-  Container,
 } from "@mui/material";
 import StickHeader from "./StickHeader";
 let settingData = [
@@ -29,6 +28,7 @@ let settingData = [
           "storybook 생성하여 각 공통컴포넌트 개발 및 정리",
           "디렉토리 정의",
           "전역저장소 swr로 대체하여 공통 구현 및 fetcher 구현",
+          "next에 포함 된 node 통하여 api통신(보안 이슈)",
         ],
       },
       {
@@ -147,7 +147,7 @@ let settingData = [
 export default function DevelopHistory() {
   const [pickData, setPIckData] = useState(null);
   return (
-    <Container maxWidth="sm">
+    <section>
       <StickHeader title="개발경력" />
       <div style={{ backgroundColor: "#E3F0FF" }}>
         <br />
@@ -223,6 +223,6 @@ export default function DevelopHistory() {
           </div>
         )}
       </Dialog>
-    </Container>
+    </section>
   );
 }

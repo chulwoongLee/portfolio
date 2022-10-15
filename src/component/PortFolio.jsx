@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { Typography, Card, Tabs, Tab, Container } from "@mui/material";
+import { Typography, Card, Tabs, Tab } from "@mui/material";
 import mainPageImg from "src/img/mainPageImg.png";
 import codeExampleImg from "src/img/codeExampleImg.png";
 import statementExampleImg from "src/img/statementExampleImg.png";
@@ -45,7 +45,7 @@ export default function PortFolio() {
   const swiperRef = useRef(null);
   const [pickTab, setPickTab] = useState(0);
   return (
-    <Container maxWidth="sm">
+    <section>
       <StickHeader title="개발샘플" />
       <div style={{ backgroundColor: "#92A9DE" }}>
         <div style={{ margin: 10 }}>
@@ -101,6 +101,6 @@ export default function PortFolio() {
           </Card>
         </div>
       </div>
-    </Container>
+    </section>
   );
 }
