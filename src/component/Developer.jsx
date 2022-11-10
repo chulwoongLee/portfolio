@@ -3,7 +3,7 @@ import StickHeader from "./StickHeader";
 export default function Developer() {
   return (
     <section>
-      <StickHeader title="개발자 스킬" />
+      <StickHeader title="개발자 기술" />
       <div
         style={{
           flex: 1,
@@ -27,6 +27,7 @@ export default function Developer() {
                   </Typography>
                   <li>REACT(nextjs)</li>
                   <li>JAVASCRIPT</li>
+                  <li>TYPESCRIPT</li>
                   <li>HTML</li>
                   <li>CSS</li>
                   <li>JSP</li>
@@ -35,9 +36,11 @@ export default function Developer() {
               <Card style={{ marginBottom: 10 }}>
                 <ul>
                   <Typography style={{ fontWeight: "bold" }} variant="h6">
-                    DB
+                    SERVER
                   </Typography>
-                  <li>ORACLE</li>
+                  <li>NODE.JS</li>
+                  <li>SPRING-BOOT</li>
+                  <li>GRAPHQL</li>
                 </ul>
               </Card>
             </Grid>
@@ -53,11 +56,18 @@ export default function Developer() {
               <Card style={{ marginBottom: 10 }}>
                 <ul>
                   <Typography style={{ fontWeight: "bold" }} variant="h6">
-                    SERVER
+                    DB
                   </Typography>
-                  <li>NODE.JS</li>
-                  <li>SPRING-BOOT</li>
-                  <li>GRAPHQL</li>
+                  <li>ORACLE</li>
+                </ul>
+              </Card>
+              <Card style={{ marginBottom: 10 }}>
+                <ul>
+                  <Typography style={{ fontWeight: "bold" }} variant="h6">
+                    ETC
+                  </Typography>
+                  <li>DOCKER</li>
+                  <li>TDD(함수레벨)</li>
                 </ul>
               </Card>
             </Grid>

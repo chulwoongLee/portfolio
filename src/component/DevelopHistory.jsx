@@ -17,9 +17,22 @@ import {
 import StickHeader from "./StickHeader";
 let settingData = [
   {
-    subject: "2021.11~현재 블루앤트",
+    subject: "2022.12~현재 젠틀파이",
+    contents: "프론트엔드 담당자",
+    subContents: [],
+  },
+  {
+    subject: "2021.11~2022.11 블루앤트",
     contents: "테크랩-올라케어 프론트엔드 담당자",
     subContents: [
+      {
+        subTitle: "심리상담 프론트 설계 및 개발",
+        list: [
+          "프로세스 정리 및 설계협업",
+          "플러터 앱에 웹뷰 형태로 도메인 제공",
+          "app-web간 통신 규약 개발",
+        ],
+      },
       {
         subTitle: "프론트엔드 표준 설계",
         list: [

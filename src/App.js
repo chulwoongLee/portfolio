@@ -13,7 +13,7 @@ function App() {
         display: "flex",
       }}
     >
-      <div style={{ maxWidth: 768 }}>
+      <div style={{ maxWidth: 768, width: "100%" }}>
         <Main />
 
         <Snackbar
