@@ -17,11 +17,6 @@ import {
 import StickHeader from "./StickHeader";
 let settingData = [
   {
-    subject: "2022.12~현재 젠틀파이",
-    contents: "프론트엔드 담당자",
-    subContents: [],
-  },
-  {
     subject: "2021.11~2022.11 블루앤트",
     contents: "테크랩-올라케어 프론트엔드 담당자",
     subContents: [
