@@ -1,54 +1,93 @@
 import Main from "./component/Main";
-import { Snackbar, Typography } from "@mui/material";
-import { CheckCircleOutline } from "@mui/icons-material";
-import { useState } from "react";
+import "./App.css";
+import { SwrPage } from "./swr/SwrPage";
+import { useEffect, useState } from "react";
+import { Modal, Typography, Button } from "@mui/material";
 function App() {
-  const [finishPage, setFinishPage] = useState(true);
-
+  const { swrPageValue } = SwrPage();
+  const [settingDeg, setSettingDeg] = useState(0);
+  const [alertMessage, setAlertMessage] = useState("");
+  useEffect(() => {
+    window.alert = (a) => {
+      setAlertMessage(a);
+    };
+    document.body.style.overscrollBehaviorY = "none";
+  }, []);
+  useEffect(() => {
+    let pickDeg = "#000000";
+    if (swrPageValue === "") {
+      pickDeg = "#000000";
+    } else if (swrPageValue === "developHistory") {
+      pickDeg = "#28161C";
+    } else if (swrPageValue === "samplePage") {
+      pickDeg = "#170000";
+    } else if (swrPageValue === "sampleProject") {
+      pickDeg = "#3A2F0B";
+    }
+    setSettingDeg(pickDeg);
+  }, [swrPageValue]);
   return (
     <article
       style={{
-        alignItems: "center",
+        alignItems: "flex-start",
         justifyContent: "center",
         display: "flex",
+        height: "100vh",
+        backgroundColor: settingDeg,
+        //background: `linear-gradient(${settingDeg}deg, rgba(32,29,38,1) 0%, rgba(87,57,78,1) 100%)`,
+        transition: "all 0.4s",
       }}
     >
-      <div style={{ maxWidth: 768, width: "100%" }}>
+      <div
+        style={{
+          padding: "0px 12px",
+          maxWidth: 1280,
+          width: "100%",
+          height: "100%",
+          alignItems: "center",
+          justifyContent: "center",
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
+        <div style={{ height: 12 }} />
         <Main />
-
-        <Snackbar
-          style={{ zIndex: 99999 }}
-          open={finishPage}
-          anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
-          autoHideDuration={5000}
-          onClose={() => {
-            setFinishPage(false);
+        <div style={{ height: 24 }} />
+      </div>
+      <Modal open={alertMessage.length > 0}>
+        <div
+          style={{
+            width: "100%",
+            height: "100%",
+            alignItems: "center",
+            justifyContent: "center",
+            display: "flex",
           }}
         >
           <div
             style={{
-              backgroundColor: "#EDF7ED",
-              display: "flex",
-              width: "100%",
+              backgroundColor: "#ffffff",
+              padding: 24,
+              borderRadius: 24,
             }}
           >
-            <CheckCircleOutline
-              style={{ color: "#80C683", fontWeight: "bold" }}
-              fontSize="large"
-            />
-            <Typography
-              style={{
-                color: "#1E595F",
-                fontWeight: "bold",
-                alignSelf: "center",
-              }}
-              variant="body1"
-            >
-              oracle-cloud 이슈로 몇몇 예제페이지 안됩니다.
+            <Typography variant="h6" fontWeight="bold">
+              {" "}
+              {alertMessage}
             </Typography>
+            <Button
+              style={{ marginTop: 12 }}
+              variant="contained"
+              fullWidth
+              onClick={() => {
+                setAlertMessage("");
+              }}
+            >
+              <Typography>확인</Typography>
+            </Button>
           </div>
-        </Snackbar>
-      </div>
+        </div>
+      </Modal>
     </article>
   );
 }

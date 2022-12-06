@@ -4,7 +4,6 @@ import {
   Step,
   StepLabel,
   Typography,
-  Card,
   Button,
   Dialog,
   DialogTitle,
@@ -14,11 +13,10 @@ import {
   TableRow,
   TableCell,
 } from "@mui/material";
-import StickHeader from "./StickHeader";
 let settingData = [
   {
     subject: "2021.11~2022.11 블루앤트",
-    contents: "테크랩-올라케어 프론트엔드 담당자",
+    contents: "테크랩-올라케어(프론트엔드)",
     subContents: [
       {
         subTitle: "심리상담 프론트 설계 및 개발",
@@ -26,6 +24,7 @@ let settingData = [
           "프로세스 정리 및 설계협업",
           "플러터 앱에 웹뷰 형태로 도메인 제공",
           "app-web간 통신 규약 개발",
+          "운영업무 위한 통합 어드민 개발",
         ],
       },
       {
@@ -35,7 +34,7 @@ let settingData = [
           "TDD 일부 적용(함수 레벨)",
           "storybook 생성하여 각 공통컴포넌트 개발 및 정리",
           "디렉토리 정의",
-          "전역저장소 swr로 대체하여 공통 구현 및 fetcher 구현",
+          "전역저장소 swr로 대체하여 공통 구현 및 폴링 형태의 fetcher 구현",
           "next에 포함 된 node 통하여 api통신(보안 이슈)",
         ],
       },
@@ -63,7 +62,8 @@ let settingData = [
   },
   {
     subject: "2020.04~2021.06 프리랜서",
-    contents: "예다함상조 통합유지보수 MOBILE(WEB) 및 TABLET(APP)담당",
+    contents:
+      "예다함상조 통합유지보수(프론트엔드) MOBILE(WEB) 및 TABLET(APP)담당",
     subContents: [
       {
         subTitle: "대외계 업무(cors해결)",
@@ -97,7 +97,7 @@ let settingData = [
   },
   {
     subject: "2017.08~2020.03 프리랜서",
-    contents: "예다함상조 통합유지보수 ERP(BO) 담당",
+    contents: "예다함상조 통합유지보수 ERP(BO) 담당(풀스택)",
     subContents: [
       {
         subTitle: "전광판 업무지원",
@@ -134,7 +134,7 @@ let settingData = [
     ],
   },
   {
-    subject: "2015.04~2016.10 아림티앤씨",
+    subject: "2015.04~2016.10 아림티앤씨(풀스택)",
     contents: "ERP 사업부",
     subContents: [
       {
@@ -156,36 +156,32 @@ export default function DevelopHistory() {
   const [pickData, setPIckData] = useState(null);
   return (
     <section>
-      <StickHeader title="개발경력" />
-      <div style={{ backgroundColor: "#E3F0FF" }}>
-        <br />
-        <div style={{ margin: 10 }}>
-          <Card>
-            <Stepper activeStep={settingData.length} orientation="vertical">
-              {settingData.map((dataList, index) => (
-                <Step key={index}>
-                  <StepLabel>
-                    <Typography style={{ fontWeight: "bold" }} variant="h6">
-                      {dataList.subject}
-                    </Typography>
-                    <Typography>{dataList.contents}</Typography>
-                    <Button
-                      variant="contained"
-                      color="primary"
-                      onClick={() => {
-                        setPIckData(dataList);
-                      }}
-                    >
-                      <Typography>주요성과</Typography>
-                    </Button>
-                  </StepLabel>
-                </Step>
-              ))}
-            </Stepper>
-          </Card>
-        </div>
-        <br />
-      </div>
+      <Stepper activeStep={settingData.length} orientation="vertical">
+        {settingData.map((dataList, index) => (
+          <Step key={index}>
+            <StepLabel>
+              <Typography
+                style={{ fontWeight: "bold", color: "#ffffff" }}
+                variant="h6"
+              >
+                {dataList.subject}
+              </Typography>
+              <Typography style={{ color: "#ffffff" }}>
+                {dataList.contents}
+              </Typography>
+              <Button
+                variant="contained"
+                color="primary"
+                onClick={() => {
+                  setPIckData(dataList);
+                }}
+              >
+                <Typography>업무내용</Typography>
+              </Button>
+            </StepLabel>
+          </Step>
+        ))}
+      </Stepper>
       <Dialog style={{ zIndex: 9999 }} maxWidth="lg" open={pickData !== null}>
         {pickData !== null && (
           <div>
@@ -193,7 +189,7 @@ export default function DevelopHistory() {
               <div style={{ flexGrow: 1 }}>{pickData.subject}</div>
               <Button
                 variant="contained"
-                color="secondary"
+                color="inherit"
                 onClick={() => {
                   setPIckData(null);
                 }}

@@ -2,7 +2,6 @@
   max-width: 768px;
   text-align: center;
 }
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -36,4 +35,15 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.MuiStepLabel-iconContainer.MuiStepLabel-alternativeLabel {
+  color: #ffffff !important;
+}
+.MuiStepLabel-label.Mui-active {
+  color: #1976d2 !important;
+  font-weight: bold !important;
+}
+.MuiStepLabel-label.MuiStepLabel-alternativeLabel {
+  color: #ffffff;
 }
