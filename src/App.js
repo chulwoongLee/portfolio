@@ -21,7 +21,7 @@ function App() {
       pickDeg = "#28161C";
     } else if (swrPageValue === "samplePage") {
       pickDeg = "#170000";
-    } else if (swrPageValue === "sampleProject") {
+    } else if (swrPageValue === "portfolie-asis") {
       pickDeg = "#3A2F0B";
     }
     setSettingDeg(pickDeg);

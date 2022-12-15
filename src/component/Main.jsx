@@ -20,7 +20,7 @@ function ComponentTitle() {
   const menuList = [
     { title: "개발경력", page: "developHistory" },
     { title: "샘플페이지", page: "samplePage" },
-    { title: "샘플프로젝트", page: "sampleProject" },
+    { title: "포트폴리오as-is", page: "portfolie-asis" },
   ];
   return (
     <section
@@ -62,7 +62,7 @@ function SubComponentMenuItem(props) {
   return (
     <Button
       onClick={() => {
-        if (page === "sampleProject") {
+        if (page === "samplepage") {
           alert("준비중 입니다.");
         } else {
           setSwrPageValue(page);
@@ -91,7 +91,7 @@ function ComponentBody() {
       {swrPageValue === "" && <Intro />}
       {swrPageValue === "developHistory" && <DevelopHistory />}
       {swrPageValue === "samplePage" && <SamplePage />}
-      {swrPageValue === "sampleProject" && <Intro />}
+      {swrPageValue === "portfolie-asis" && <Intro />}
     </section>
   );
 }

@@ -151,6 +151,16 @@ let settingData = [
       },
     ],
   },
+  {
+    subject: "2013.07~2014.10 세원텔레텍(비개발자)",
+    contents: "품질관리팀",
+    subContents: [
+      {
+        subTitle: "제품Q/C",
+        list: [],
+      },
+    ],
+  },
 ];
 export default function DevelopHistory() {
   const [pickData, setPIckData] = useState(null);

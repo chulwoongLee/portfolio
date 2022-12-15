@@ -5,6 +5,7 @@ import woongPangImg from "src/img/woongPangImg.png";
 import whatshereImg from "src/img/whatshereImg.png";
 import graphqlSample from "src/img/graphqlSample.png";
 import storybookSample from "src/img/storybook-sample.png";
+import dockerSampleImg from "src/img/docker-sample-img.png";
 export default function SamplePage() {
   const webItemList = [
     {
@@ -47,6 +48,14 @@ export default function SamplePage() {
     },
   ];
   const dbItemList = [];
+  const dockerItemList = [
+    {
+      title: "docker(샘플 없음)",
+      description: "oracle-cloud에 docker image 생성",
+      img: dockerSampleImg,
+      url: null,
+    },
+  ];
   return (
     <Fragment>
       <div style={{ marginTop: 32 }}>
@@ -195,6 +204,38 @@ export default function SamplePage() {
           ))}
         </section>
       </div>
+
+      <div style={{ marginTop: 32 }}>
+        <Typography
+          style={{ fontWeight: "bold", color: "#ffffff" }}
+          variant="h6"
+        >
+          DOCKER
+        </Typography>
+        <Typography style={{ color: "#ffffff" }} variant="body1">
+          build-run을 통한 컨테이너 실행정도의 레벨
+        </Typography>
+        <section
+          style={{
+            marginTop: 12,
+            alignItems: "center",
+            justifyContent: "flex-start",
+            display: "flex",
+            flexWrap: "wrap",
+            gap: 26,
+          }}
+        >
+          {dockerItemList.map((dataList, index) => (
+            <ComponentSampleItem
+              img={dataList.img}
+              title={dataList.title}
+              description={dataList.description}
+              url={dataList.url}
+              key={index}
+            />
+          ))}
+        </section>
+      </div>
     </Fragment>
   );
 }
@@ -207,19 +248,23 @@ function ComponentSampleItem(props) {
       style={{
         width: 180,
         height: 240,
-        cursor: "pointer",
+        cursor: url ? "pointer" : "",
         alignItems: "center",
         justifyContent: "center",
         display: "flex",
       }}
       onMouseOver={() => {
-        setOverStatus(true);
+        if (url) {
+          setOverStatus(true);
+        }
       }}
       onMouseOut={() => {
         setOverStatus(false);
       }}
       onClick={() => {
-        window.open(url);
+        if (url) {
+          window.open(url);
+        }
       }}
     >
       <Card
