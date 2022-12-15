@@ -22,7 +22,8 @@ function App() {
     } else if (swrPageValue === "samplePage") {
       pickDeg = "#170000";
     } else if (swrPageValue === "portfolie-asis") {
-      pickDeg = "#3A2F0B";
+      //pickDeg = "#3A2F0B";
+      pickDeg = "#92A9DE";
     }
     setSettingDeg(pickDeg);
   }, [swrPageValue]);

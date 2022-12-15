@@ -6,7 +6,7 @@ import PortFolio from "./PortFolio";
 import StickHeader from "./StickHeader";
 import { useState } from "react";
 import { useEffect } from "react";
-export default function Main() {
+export default function MainAsIs() {
   const [windowMode, setWindoeMode] = useState(false);
   useEffect(() => {
     if (window.innerWidth > 980) {
@@ -36,23 +36,6 @@ export default function Main() {
           />
         </section>
       )}
-      <footer
-        style={{
-          bottom: 0,
-          position: "sticky",
-          backgroundColor: "#DDDDDD",
-          zIndex: 9998,
-        }}
-      >
-        <Typography
-          variant="body1"
-          color="textSecondary"
-          align="center"
-          style={{ fontWeight: "bold" }}
-        >
-          Copyright © 이철웅 ytooktoo2@nate.com
-        </Typography>
-      </footer>
     </Fragment>
   );
 }

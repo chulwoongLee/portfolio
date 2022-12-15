@@ -5,6 +5,7 @@ import DevelopHistory from "./DevelopHistory";
 import { SwrPage } from "src/swr/SwrPage";
 import SamplePage from "./SamplePage";
 import Intro from "./Intro";
+import MainAsIs from "./MainAsIs";
 export default function Main() {
   return (
     <Fragment>
@@ -91,7 +92,7 @@ function ComponentBody() {
       {swrPageValue === "" && <Intro />}
       {swrPageValue === "developHistory" && <DevelopHistory />}
       {swrPageValue === "samplePage" && <SamplePage />}
-      {swrPageValue === "portfolie-asis" && <Intro />}
+      {swrPageValue === "portfolie-asis" && <MainAsIs />}
     </section>
   );
 }
