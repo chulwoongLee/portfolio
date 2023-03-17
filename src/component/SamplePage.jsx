@@ -6,6 +6,7 @@ import whatshereImg from "src/img/whatshereImg.png";
 import graphqlSample from "src/img/graphqlSample.png";
 import storybookSample from "src/img/storybook-sample.png";
 import dockerSampleImg from "src/img/docker-sample-img.png";
+import chartExampleImg from "src/img/chartExampleImg.png";
 export default function SamplePage() {
   const webItemList = [
     {
@@ -25,6 +26,12 @@ export default function SamplePage() {
       description: "스토리북을 이용하여 샘플 컴포넌트 표출",
       img: storybookSample,
       url: process.env.PUBLIC_URL + "/storybook-static/index.html",
+    },
+    {
+      title: "차트페이지(샘플)",
+      description: "네이버API를 이용하여 트렌드데이터 서치 및 비교",
+      img: chartExampleImg,
+      url: "http://132.226.169.203:3044",
     },
   ];
 
