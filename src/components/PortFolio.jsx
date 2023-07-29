@@ -1,13 +1,5 @@
 import React, { useState, useRef } from "react";
 import { Typography, Card, Tabs, Tab } from "@mui/material";
-import mainPageImg from "src/img/mainPageImg.png";
-import codeExampleImg from "src/img/codeExampleImg.png";
-import statementExampleImg from "src/img/statementExampleImg.png";
-import notiPushImg from "src/img/notiPushImg.png";
-import woongPangImg from "src/img/woongPangImg.png";
-import whatshereImg from "src/img/whatshereImg.png";
-import connectSlack from "src/img/connectSlack.png";
-import chartExampleImg from "src/img/chartExampleImg.png";
 import StickHeader from "./StickHeader";
 import CountryMap from "./CountryMap";
 
@@ -22,23 +14,28 @@ let settingData = [
     title: "업무시스템",
     url: "http://132.226.169.203:3000",
     list: [
-      { subTitle: "대시보드", img: mainPageImg },
-      { subTitle: "코드값의 이해와 사용예제", img: codeExampleImg },
-      { subTitle: "요구사항 기반으로 개발진행", img: statementExampleImg },
+      { subTitle: "대시보드", img: "/img/mainPageImg.png" },
+      { subTitle: "코드값의 이해와 사용예제", img: "/img/codeExampleImg.png" },
+      {
+        subTitle: "요구사항 기반으로 개발진행",
+        img: "/img/statementExampleImg.png",
+      },
     ],
   },
   {
     title: "앱개발",
     url: "https://play.google.com/store/apps/details?id=com.chulwoong.whatshere",
     list: [
-      { subTitle: "google-map 렌더링", img: whatshereImg },
-      { subTitle: "FCM-EXPO push알림", img: notiPushImg },
+      { subTitle: "google-map 렌더링", img: "/img/whatshereImg.png" },
+      { subTitle: "FCM-EXPO push알림", img: "/img/notiPushImg.png" },
     ],
   },
   {
     title: "API연동 및 cors 처리",
     url: "https://chulwoonglee.github.io/woong-pang",
-    list: [{ subTitle: "타사 API연동으로 물품 판매 ", img: woongPangImg }],
+    list: [
+      { subTitle: "타사 API연동으로 물품 판매 ", img: "/img/woongPangImg.png" },
+    ],
   },
 ];
 export default function PortFolio() {
@@ -92,10 +89,10 @@ export default function PortFolio() {
                 <CountryMap />
               </SwiperSlide>
               <SwiperSlide style={{ textAlign: "center" }}>
-                <img width="100%" src={chartExampleImg} />
+                <img width="100%" src="/img/chartExampleImg.png" />
               </SwiperSlide>
               <SwiperSlide style={{ textAlign: "center" }}>
-                <img width="100%" src={connectSlack} />
+                <img width="100%" src="/img/connectSlack.png" />
               </SwiperSlide>
             </Swiper>
           </Card>
