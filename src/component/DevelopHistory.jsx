@@ -15,6 +15,36 @@ import {
 } from "@mui/material";
 let settingData = [
   {
+    subject: "2023.01~ 재담미디어",
+    contents: "전략사업본부-프론트엔드 리더",
+    subContents: [
+      {
+        subTitle: "구독형 웹툰플랫폼 쇼츠",
+        list: [
+          "전체아키텍처 설계",
+          "공통 컴포넌트 설계",
+          "전역저장소 구성",
+          "API도메인 패턴 구성",
+          "내부 node통한 API처리 구성",
+        ],
+      },
+      {
+        subTitle: "쇼츠어드민",
+        list: [
+          "전체아키텍처 설계",
+          "공통 컴포넌트 설계",
+          "전역저장소 구성",
+          "API도메인 패턴 구성",
+          "내부 node통한 API처리 구성",
+        ],
+      },
+      {
+        subTitle: "웹툰 대학공모전 웹툰런",
+        list: ["전체개발"],
+      },
+    ],
+  },
+  {
     subject: "2021.11~2022.11 블루앤트",
     contents: "테크랩-올라케어(프론트엔드)",
     subContents: [
@@ -195,7 +225,7 @@ export default function DevelopHistory() {
       <Dialog style={{ zIndex: 9999 }} maxWidth="lg" open={pickData !== null}>
         {pickData !== null && (
           <div>
-            <DialogTitle style={{ display: "flex" }}>
+            <DialogTitle style={{ display: "flex", gap: 12 }}>
               <div style={{ flexGrow: 1 }}>{pickData.subject}</div>
               <Button
                 variant="contained"
@@ -207,7 +237,7 @@ export default function DevelopHistory() {
                 닫기
               </Button>
             </DialogTitle>
-            <TableContainer style={{ maxHeight: 500 }}>
+            <TableContainer style={{ maxHeight: 500, minWidth: 320 }}>
               <Table>
                 <TableBody>
                   {pickData.subContents.map((dataList, index) => (
