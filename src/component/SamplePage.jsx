@@ -1,5 +1,6 @@
 import { Card, CardContent, CardMedia, Typography } from "@mui/material";
 import { Fragment, useState } from "react";
+import mainPageImgNew from "src/img/mainPageImgNew.png";
 import mainPageImg from "src/img/mainPageImg.png";
 import woongPangImg from "src/img/woongPangImg.png";
 import whatshereImg from "src/img/whatshereImg.png";
@@ -9,6 +10,12 @@ import dockerSampleImg from "src/img/docker-sample-img.png";
 import chartExampleImg from "src/img/chartExampleImg.png";
 export default function SamplePage() {
   const webItemList = [
+    {
+      title: "백오피스(샘플)-new",
+      description: "업무시스템 예제 페이지",
+      img: mainPageImgNew,
+      url: "https://sample-backoffice-frontend.vercel.app/login",
+    },
     {
       title: "백오피스(샘플)",
       description: "업무시스템 예제 페이지",
