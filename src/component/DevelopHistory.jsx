@@ -17,9 +17,22 @@ let settingData = [
   {
     subject: "2023.01~ 재담미디어",
     contents: "전략사업본부-프론트엔드 리더",
+
     subContents: [
       {
-        subTitle: "구독형 웹툰플랫폼 쇼츠",
+        subTitle: "구독형 웹툰플랫폼 쇼츠(앱)-웹뷰담당",
+        list: [
+          "전체아키텍처 설계",
+          "atoms,molecules 설계",
+          "zustand및 swr 구성",
+          "API도메인 패턴 구성",
+          "내부 node통한 API처리 구성",
+          "앱-웹뷰 통신규약 설계 및 라우터처리",
+          "스토리북설계 및 디자인연동",
+        ],
+      },
+      {
+        subTitle: "구독형 웹툰플랫폼 쇼츠(웹)",
         list: [
           "전체아키텍처 설계",
           "공통 컴포넌트 설계",

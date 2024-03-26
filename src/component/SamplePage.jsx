@@ -8,8 +8,15 @@ import graphqlSample from "src/img/graphqlSample.png";
 import storybookSample from "src/img/storybook-sample.png";
 import dockerSampleImg from "src/img/docker-sample-img.png";
 import chartExampleImg from "src/img/chartExampleImg.png";
+import swagger from "src/img/swagger.png";
 export default function SamplePage() {
   const webItemList = [
+    {
+      title: "스웨거(샘플)",
+      description: "예제용 스웨거",
+      img: swagger,
+      url: "http://132.226.169.203:8091/swagger-ui.html",
+    },
     {
       title: "백오피스(샘플)-new",
       description: "업무시스템 예제 페이지",
