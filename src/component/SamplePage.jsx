@@ -12,12 +12,6 @@ import swagger from "src/img/swagger.png";
 export default function SamplePage() {
   const webItemList = [
     {
-      title: "스웨거(샘플)",
-      description: "예제용 스웨거",
-      img: swagger,
-      url: "http://132.226.169.203:8091/swagger-ui.html",
-    },
-    {
       title: "백오피스(샘플)-new",
       description: "업무시스템 예제 페이지",
       img: mainPageImgNew,
@@ -61,6 +55,12 @@ export default function SamplePage() {
 
   const serverItemList = [
     {
+      title: "스웨거(샘플)",
+      description: "예제용 스웨거",
+      img: swagger,
+      url: "http://132.226.169.203:8091/swagger-ui.html",
+    },
+    {
       title: "graphql(샘플)",
       description:
         "graphql 기반의 API호출 사이트로 따로 토큰 처리 안하고 있어서 자유롭게 이용 가능합니다.",
@@ -87,9 +87,9 @@ export default function SamplePage() {
           WEB
         </Typography>
         <Typography style={{ color: "#ffffff" }} variant="body1">
-          web-was의 레거시 한 환경에서 jsp로 웹을 시작하였습니다.
+          web-was의 레거시한 환경에서 jsp로 웹을 시작하였습니다.
           <br />
-          바닐라 js 사용을 좋아하며 최근부터는 react(nextjs)+typescript를 주로
+          바닐라 js 사용을 좋아하며 2020년부터는 react(nextjs)+typescript 위주로
           사용합니다.
         </Typography>
         <section
@@ -165,6 +165,8 @@ export default function SamplePage() {
           <br />
           고객 요청으로 결제모듈 또는 인터페이스 모듈 개발에 spring-boot를 주
           이용하였습니다.
+          <br />
+          2020년도부터는 spring-boot에서 jpa환경으로 작업하였습니다.
         </Typography>
         <section
           style={{
